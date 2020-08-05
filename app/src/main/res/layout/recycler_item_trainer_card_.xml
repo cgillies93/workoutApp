@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:id="@+id/trainerFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="24dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="First Name" />
+
+        <TextView
+            android:id="@+id/trainerLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/trainerFirstName"
+            app:layout_constraintStart_toStartOf="@+id/trainerFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/trainerFirstName"
+            tools:text="Last Name" />
+
+        <ImageView
+            android:id="@+id/trainerImage"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_trainer_image_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/trainerFirstName"
+            app:layout_constraintStart_toStartOf="@+id/trainerFirstName"
+            app:layout_constraintTop_toBottomOf="@id/trainerLastName" />
+
+        <TextView
+            android:id="@+id/trainerCertifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintStart_toEndOf="@+id/trainerImage"
+            app:layout_constraintTop_toBottomOf="@+id/trainerCertificationsTitle"
+            tools:text="List of certifications" />
+
+        <TextView
+            android:id="@+id/trainerBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/trainerImage"
+            app:layout_constraintEnd_toEndOf="@+id/trainerCertifications"
+            app:layout_constraintStart_toStartOf="@+id/trainerCertifications"
+            app:layout_constraintTop_toTopOf="@+id/trainerImage"
+            app:layout_constraintVertical_bias="0.475"
+            tools:text="This is where to trainer bio will go" />
+
+        <TextView
+            android:id="@+id/trainerCertificationsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trainer_certification_title"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/trainerFirstName"
+            app:layout_constraintEnd_toEndOf="@+id/trainerCertifications"
+            app:layout_constraintStart_toStartOf="@+id/trainerCertifications"
+            app:layout_constraintTop_toTopOf="@+id/trainerFirstName" />
+
+        <TextView
+            android:id="@+id/trainerBioTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trainer_bio_title"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/trainerImage"
+            app:layout_constraintEnd_toEndOf="@+id/trainerCertificationsTitle"
+            app:layout_constraintStart_toStartOf="@+id/trainerCertificationsTitle"
+            app:layout_constraintTop_toTopOf="@+id/trainerFirstName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

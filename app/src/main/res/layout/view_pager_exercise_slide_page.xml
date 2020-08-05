@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/exerciseImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/design_default_color_on_primary" />
+
+    <TextView
+        android:id="@+id/exerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:text="Exercise Name"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseImage" />
+
+    <TextView
+        android:id="@+id/exerciseType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Type"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseName" />
+
+    <TextView
+        android:id="@+id/exercisesTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/exerciseName"
+        app:layout_constraintEnd_toStartOf="@+id/exerciseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/exerciseName"
+        tools:text="6"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/exercisesSlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/exercisesTotal"
+        app:layout_constraintEnd_toStartOf="@+id/exercisesTotal"
+        app:layout_constraintTop_toTopOf="@+id/exercisesTotal"
+        android:text="@string/backslash"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/exerciseNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/exercisesTotal"
+        app:layout_constraintEnd_toStartOf="@+id/exercisesSlash"
+        app:layout_constraintTop_toTopOf="@+id/exercisesTotal"
+        tools:text="1"
+        android:textColor="@color/white"/>
+
+    <Switch
+        android:id="@+id/weightSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="@string/switch_off_Kg"
+        android:textOn="@string/switch_on_lbs"
+        android:showText="true"
+        android:thumb="@drawable/weight_switch_thumb"
+        android:track="@drawable/weight_switch_track"
+        app:layout_constraintBottom_toBottomOf="@+id/exerciseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/exerciseName"
+        app:layout_constraintTop_toTopOf="@+id/exerciseName"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/exerciseDescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/exerciseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseType"
+        android:text="@string/description"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/exerciseDescription"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        tools:text="Exercise description will go here"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseDescriptionTitle" />
+
+    <TableLayout
+        android:id="@+id/exerciseTableLayout"
+        android:layout_width="409dp"
+        android:layout_height="338dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseDescription"
+        android:stretchColumns="0,1,2">
+        <TableRow>
+            <TextView
+                android:text="Sets"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:text="Reps"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+            <TextView
+                android:text="Weight"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </TableRow>
+        <View
+            android:id="@+id/viewMargin"
+            android:layout_height="20dp"
+            android:layout_width="match_parent"/>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

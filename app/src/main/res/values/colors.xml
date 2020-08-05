@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333</color>
+    <color name="colorAccent">#b6121d</color>
+    <color name="white">#fff</color>
+    <color name="black">#000000</color>
+
+    <color name="button_gradient_start">#b6121d</color>
+    <color name="button_gradient_center">#C0252F</color>
+    <color name="button_gradient_end">#BD3941</color>
+</resources>

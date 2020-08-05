@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="4dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/workoutName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workoutImages"
+            tools:text="Workout Name" />
+
+        <TextView
+            android:id="@+id/workoutTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/workoutTimeIcon"
+            app:layout_constraintStart_toEndOf="@+id/workoutTimeIcon"
+            app:layout_constraintTop_toTopOf="@+id/workoutTimeIcon"
+            tools:text="Time" />
+
+        <TextView
+            android:id="@+id/workoutEquipment"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/workoutEquipmentIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/workoutName"
+            app:layout_constraintTop_toTopOf="@+id/workoutTime"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Equipment" />
+
+        <TextView
+            android:id="@+id/workoutDayNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="1dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/workoutName"
+            app:layout_constraintEnd_toStartOf="@+id/workoutName"
+            app:layout_constraintHorizontal_bias="0.568"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/workoutName"
+            app:layout_constraintVertical_bias="0.666"
+            tools:text="2" />
+
+        <Button
+            android:id="@+id/buttonBeginWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="5dp"
+            android:text="@string/button_begin_workout"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workoutEquipment"
+            app:layout_constraintVertical_bias="0.652" />
+
+        <ImageView
+            android:id="@+id/workoutImages"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/white"
+            android:contentDescription="@string/description_workout_images" />
+
+        <TextView
+            android:id="@+id/workoutType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="Type"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workoutName" />
+
+        <TextView
+            android:id="@+id/dayNumberTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/workout_day_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/workoutDayNumber"
+            app:layout_constraintEnd_toStartOf="@+id/workoutDayNumber"
+            app:layout_constraintTop_toTopOf="@+id/workoutDayNumber" />
+
+        <ImageView
+            android:id="@+id/workoutTimeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/clock_icon"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/workoutDayNumber"
+            app:layout_constraintStart_toStartOf="@+id/dayNumberTitle"
+            app:layout_constraintTop_toBottomOf="@+id/workoutType"
+            android:contentDescription="@string/description_clock_icon" />
+
+        <ImageView
+            android:id="@+id/workoutEquipmentIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/description_equipment_icon"
+            android:src="@drawable/workout_icon"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/workoutTimeIcon"
+            app:layout_constraintEnd_toStartOf="@+id/workoutEquipment"
+            app:layout_constraintHorizontal_bias="-2.0"
+            app:layout_constraintStart_toEndOf="@+id/workoutName"
+            app:layout_constraintTop_toTopOf="@+id/workoutTimeIcon"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

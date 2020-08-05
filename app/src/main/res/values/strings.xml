@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">GymApp</string>
+
+
+    ////Bottom Nav
+    <string name="bottom_nav_explore">Explore</string>
+    <string name="bottom_nav_workout">Workout</string>
+    <string name="bottom_nav_find_a_trainer">Find a Trainer</string>
+    <string name="bottom_nav_myAccount">My Account</string>
+
+    ////Titles
+    <string name="my_plans_title">My Workout Plans</string>
+    <string name="explore_plans_title">Find Workout Plan</string>
+    <string name="trainer_certification_title">Certifications</string>
+    <string name="trainer_bio_title">Bio</string>
+    <string name="info_title_background">Info Title Background</string>
+    <string name="tv_completed_title">Completed</string>
+    <string name="info_info_title">Info</string>
+
+    ////Buttons
+    <string name="button_continue_plan">Continue Plan</string>
+    <string name="button_begin_workout">Begin Workout</string>
+    <string name="button_start_plan">Start Plan</string>
+    <string name="button_cancel">Cancel</string>
+
+    ////Symbols
+    <string name="tv_percent">%</string>
+    <string name="backslash">/</string>
+
+
+    ////Start Plan Dialog
+    <string name="start_plan_dialog_question">Are you sure you want to start this workout plan?</string>
+    <string name="start_plan_dialog_title">Start Workout Plan</string>
+
+
+    ////Change Weight Switch
+    <string name="switch_off_Kg">KG</string>
+    <string name="switch_on_lbs">LBS</string>
+    <string name="description">Description</string>
+    <string name="workout_day_title">Day</string>
+
+
+    ////Content Descriptions
+    <string name="description_clock_icon">Clock Icon</string>
+    <string name="description_equipment_icon">Equipment Icon</string>
+    <string name="description_workout_images">Workout Images</string>
+
+</resources>

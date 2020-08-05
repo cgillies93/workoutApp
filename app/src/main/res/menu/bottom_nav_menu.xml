@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigationExplore"
+        android:icon="@drawable/explore_icon"
+        android:title="@string/bottom_nav_explore"/>
+    <item
+        android:id="@+id/navigationWorkout"
+        android:icon="@drawable/workout_icon"
+        android:title="@string/bottom_nav_workout"/>
+    <item
+        android:id="@+id/navigationFindATrainer"
+        android:title="@string/bottom_nav_find_a_trainer"
+        android:icon="@drawable/trainers_icon"/>
+    <item
+        android:id="@+id/navigationMyAccount"
+        android:icon="@drawable/my_account_icon"
+        android:title="@string/bottom_nav_myAccount"/>
+
+</menu>
